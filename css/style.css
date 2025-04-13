@@ -308,7 +308,7 @@ body.dark .start-card:hover {
     }
 
     .card {
-        width: 95%;
+        width: 75%;
         margin: 0 0 px 0; /* ingen auto-centrering, bara avståndet neråt */
         max-width: unset;
         min-width: unset;
