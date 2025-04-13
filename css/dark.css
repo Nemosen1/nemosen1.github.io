@@ -1,0 +1,252 @@
+h1 {
+    text-align: center;
+    font-family: serif;
+}
+
+body
+{
+    background-color: #121212;
+    color: #e0e0e0;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    /*centrerar hela raden */
+    gap: 20px;
+    /*mellanrum mellan korten*/
+    flex-wrap: wrap;
+    /*gör så att korten går ner på ny rad vid behov*/
+    margin-top: 40px;
+}
+
+.card-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    /* beskär bilden utan att förstöra propotionerna */
+    border-radius: 20px;
+}
+
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*Denna ihop med .card:hover gör så att korten blir större med musen på.*/
+
+    /* Denna gör så att korten fadeas in istället för att glida in, det fuckade upp korten när jag hade glid in. */
+    opacity: 0;
+    animation: fadeInOnly 0.8s ease forwards; /* Längst ner finns @keyframe till fadeInOnly */
+  
+
+}
+.card:hover
+{ 
+    transform: scale(1.04);
+    box-shadow: 0 12px 24px rgba(255, 120, 80, 0.2);
+}
+
+.card-button
+{/*Här skriver vi grundstilen på knappen, mycket grejer*/
+background-color: #ff5722;
+color: white;
+border: none;
+padding: 10px 20px;
+font-size: 16px;
+border-radius: 5px;
+cursor:pointer;
+transition: all 0.3s ease;
+}
+
+.card-button:hover
+{/*Här är hover effekten*/
+    background-color: #d85c3f;
+    transform: scale(1.05);
+}
+
+
+@keyframes fadeInOnly {
+    to {
+        opacity: 1;
+    }
+}
+
+.theme-switch
+{
+text-align: center;
+margin-bottom: 40px;
+margin-top: 40px;
+}
+
+.about-me
+{
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    color: #c0c0c0;
+}
+
+.about-me h2
+{
+font-size: 28px;
+margin-bottom: 10px;
+
+}
+
+footer
+{
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    font-size: 14px;
+    border-top: 1px solid #333;/*Denna ger grått streck på sidan*/
+}
+
+
+/*Denna kod gör att alla enheter med mindre än 678 pixlar i bredd får korten i columner istället för bredden.*/
+@media screen and (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+/*=== Startsida (index_dark.html) ===*/
+
+body 
+{
+    background-color: #121212;
+    font-family: sans-serif;
+    color: #fbfbfb;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.hero
+{
+    padding: 100px 20px;
+}
+
+.fade-in /* Här är h1 Oskars galleri*/
+{
+opacity: 0;
+animation:fadeIn 1s ease-in-out forwards;
+}
+/* Här är <p> En resa i färg och kod </p> */
+.fade-in-slow
+{
+opacity: 0;
+animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translatey(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+
+/* Här är koden för "Utforska galleriet" knappen */
+.start-button
+{
+    display: inline-block;
+    background-color: #E97451;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover
+{
+    background-color: #d85c3f;
+    box-shadow: 0 0 20px rgba(233, 116, 81, 0.5);
+}
+
+.card-section
+{
+    display: flex;
+    /* Lägger korten på rad*/
+    justify-content: center;
+    /*centrerar hela raden */
+    gap: 30px;
+    /*mellanrum mellan korten*/
+    flex-wrap: wrap;
+    /* korten hoppar ner om skärmen är för smal*/
+    padding: 50px 20px;
+    /* lite extra luft runt hela sektionen*/
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.start-card
+{
+    background-color: #2a2a2a;
+    color: #f5f5f5;
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.start-card:hover
+{
+    background-color: #383838;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(255, 120, 80, 0.2);
+}
+
+.card-link
+{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #E97451;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.card-link:hover
+{
+    background-color: #d85c3f;
+}
+
+/* Tillbaka knappen/startsida knappen*/
+
+.startsida-button
+{
+    text-align: left;
+    padding: 20px;
+}
+
+.top-button .card-button
+{
+    background: #E97451;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
