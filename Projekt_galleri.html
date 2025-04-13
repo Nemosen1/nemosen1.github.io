@@ -30,48 +30,106 @@
       <h3>Skogsgetens historia</h3>
       <p>Historien om skogsgeten sträcker sig långt tillbaka i tiden.
         900 talet är första gången den blev dokumenterad.</p>
-      <a href="djur/get.html" class="card-button">Läs mer</a>
+      <button class="card-button open-popup" data-popup="popup-get">Läs mer</button>
     </div>
     <!-- Kort 1 -->
+
+    <!-- Popupen till första kortet-->
+    <div id="popup-get" class="popup">
+        <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h3>Skogsgetens historia</h3>
+          <p>Historien om skogsgeten sträcker sig långt tillbaka i tiden.
+            900 talet är första gången den blev dokumenterad</p>
+        </div>
+    </div>
+
     <div class="card">
       <img src="img/Bild_kyckling.jpg" alt="Kyckling i hand" class="card-img">
       <!--denna bild har också card-img så att den blir exakt lika stor som den första bilden-->
       <h3>Från kyckling till kyckling</h3>
       <p>Den gula kycklingen är det enda djuret som lyckades överleva istiden</p>
-      <a href="djur/kyckling.html" class="card-button">Läs mer</a>
+      <button class="card-button open-popup" data-popup="popup-kyckling">Läs mer</button>
     </div>
     <!-- Kort 2 -->
+     <!-- popup för kyckling -->
+
+    <div id="popup-kyckling" class="popup">
+        <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h3>Från kyckling till kyckling</h3>
+          <p>Den gula kycklingen är det enda djuret som lyckades överleva istiden</p>
+        </div>
+    </div>
+
     <div class="card">
       <img src="img/Bild_kanin.jpg" alt="Kaning i gräs" class="card-img">
       <h3>Kaninen, naturens lyckodjur</h3>
       <p>Vi har alla lyckodjur som katter och hundar, skogens är kaninen.</p>
-      <a href="djur/kanin.html" class="card-button">Läs mer</a>
+      <button class="card-button open-popup" data-popup="popup-kanin">Läs mer</button>
     </div>
     <!-- Kort 3 -->
+     <!--popup för kanin-->
+     <div id="popup-kanin" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h3>Kaninen - Naturens lyckodjur</h3>
+        <p>
+          Kaniner är fantastiska djur som symboliserar tur, kärlek och naturens lugn.
+          Här får du en djupare inblick i deras roll i skogens ekosystem.
+        </p>
+      </div>
+    </div>
+
     <div class="card">
       <img src="img/Bild_rav.jpg" alt="En fin räv" class="card-img">
       <h3>Räv? En röd hund </h3>
       <p>Räven raskar över isen. De är så söta, och om den tar sig
         fram och nosar, då ska man akta sig.</p>
-      <a href="djur/rav.html" class="card-button">Läs mer</a>
+        <button class="card-button open-popup" data-popup="popup-rav">Läs mer</button>
     </div>
     <!-- Kort 4 -->
+    <!--popup för räv-->
+  
+    <div id="popup-rav" class="popup">
+        <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h3>Räv? En röd hund </h3>
+          <p>Räven raskar över isen. De är så söta, och om den tar sig
+            fram och nosar, då ska man akta sig.</p>
+        </div>
+    </div>
     <div class="card">
       <img src="img/Bild_bambi.jpg" alt="Lilla Bambi" class="card-img">
       <h3>En norsk älg</h3>
       <p>Detta är den norska varianter av svensk älg. Det är sant.</p>
-      <a href="djur/bambi.html" class="card-button">Läs mer</a>
+      <button class="card-button open-popup" data-popup="popup-bambi">Läs mer</button>
     </div>
     <!-- Kort 5 -->
+    <div id="popup-bambi" class="popup">
+        <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h3>En norsk älg</h3>
+          <p>Detta är den norska varianter av svensk älg. Det är sant.</p>
+        </div>
+    </div>
+
     <div class="card">
       <img src="img/Bild_anka.jpg" alt="En liten anka" class="card-img">
       <h3>Anka i natten</h3>
       <p>Ankan simmar lugn på natten. Akta dig för gäddan.</p>
-      <a href="djur/anka.html" class="card-button">Läs mer</a>
+      <button class="card-button open-popup" data-popup="popup-anka">Läs mer</button>
     </div>
     <!-- Kort 6 -->
   </div>
-  
+
+    <div id="popup-anka" class="popup">
+        <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h3>Anka i natten</h3>
+          <p>Ankan simmar lugn på natten. Akta dig för gäddan.</p>
+        </div>
+    </div>
 
   <!--Här är knappen som ändrar till dark theme-->
   <div class="theme-switch">
@@ -90,7 +148,7 @@
 
   
   <script src="darkmode.js"></script>
+  <script src="popup.js"></script>
 
 </body>
-
 </html>
